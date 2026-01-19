@@ -99,45 +99,6 @@ POST /predict
 
 ---
 
-### Пакетный инференс
-```
-POST /predict_batch
-```
-
-Тело запроса:
-```json
-{
-  "texts": [
-    "Первый текст",
-    "Токсичный текст"
-  ]
-}
-```
-
-Ответ:
-```json
-{
-  "results": [
-    {
-      "text": "Первый текст",
-      "prediction": {
-        "label": "non-toxic",
-        "score": 0.98
-      }
-    },
-    {
-      "text": "Токсичный текст",
-      "prediction": {
-        "label": "toxic",
-        "score": 0.87
-      }
-    }
-  ]
-}
-```
-
----
-
 ### Информация о модели
 ```
 GET /model_info
